@@ -1,6 +1,7 @@
+// @flow
 import React from 'react';
 
-export type Props = {
+type Props = {
   id: number,
   name: string,
   age: number,
@@ -15,4 +16,5 @@ const Panda = (props: Props) => (
   </div>
 )
 
+export type { Props as PandaType }
 export default Panda

@@ -2,22 +2,32 @@
 import React, { Component } from 'react';
 import logo from './imgs/logo.svg';
 import './App.css';
-import Panda, {Props as PandaType} from './components/Panda.js'
+import Panda, { type PandaType } from './components/Panda.js'
 
-type Props = null
+type Props = any // none actually
 
 type State = {
-  pandas: Array<PandaType>
+  pandas: Array<PandaType>,
+  count: number
 }
 
 class App extends Component<Props, State> {
   constructor(props: Props) {
     super(props)
     this.state = {pandas: [
-      {id: 0, name: "Peter the Panda", age: 7, hobby: "race car driving", img: "1"},
-      {id: 1, name: "Paulina the Panda", age: 14, hobby: "VR simulations", img: "2"},
-      {id: 2, name: "Patrick the Panda", age: 5, hobby: "fighting crime", img: "3"}
-    ]}
+        {id: 0, name: "Peter the Panda", age: 7, hobby: "race car driving", img: "1"},
+        {id: 1, name: "Paulina the Panda", age: 14, hobby: "VR simulations", img: "2"},
+        {id: 2, name: "Patrick the Panda", age: 5, hobby: "fighting crime", img: "3"}
+      ],
+      count: 0
+    }
+    this.getUpdatedCount = this.getUpdatedCount.bind(this)
+  }
+  getUpdatedCount = () => {
+    const newCount = this.state.count++
+
+    this.setState({count: newCount})
+    return newCount
   }
   render() {
     const pandaComponents = []
