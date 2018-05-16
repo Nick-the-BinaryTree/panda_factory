@@ -48,6 +48,7 @@ class App extends Component<?Props, State> {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Panda Factory</h1>
         </header>
+        <br />
         <PandaCreateForm getUpdatedCount={this.getUpdatedCount} addNewPanda={this.addNewPanda} />
         <div className="App-intro">
           {pandaComponents}

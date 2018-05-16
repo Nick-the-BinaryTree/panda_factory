@@ -59,9 +59,8 @@ class PandaCreateForm extends Component<Props, State> {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <label>Desired Panda Name:
-          <input ref={textInput => (this.textInput = textInput)} onChange = {this.handleChange} type="text" name="name" />
-        </label>
+        <label>Desired Panda Name: </label>
+        <input ref={textInput => (this.textInput = textInput)} onChange = {this.handleChange} type="text" name="name" />
         <input type="submit" value="Generate" />
       </form>
     )
