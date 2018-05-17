@@ -7,7 +7,7 @@ type Props = {
 }
 
 const PandaList = (props: Props) => (
-  <div className="App-intro">
+  <div>
     {props.children}
   </div>
 )
