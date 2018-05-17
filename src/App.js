@@ -1,7 +1,7 @@
 // @flow
-import React, { Component } from 'react';
-import logo from './imgs/logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import logo from './imgs/logo.svg'
+import './App.css'
 import Panda, { type PandaType } from './components/Panda.js'
 import PandaCreateForm from './components/PandaCreateForm.js'
 import PandaList from './components/PandaList.js'
@@ -53,8 +53,8 @@ class App extends Component<?Props, State> {
           {pandaComponents}
         </PandaList>
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
