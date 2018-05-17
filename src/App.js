@@ -4,6 +4,7 @@ import logo from './imgs/logo.svg';
 import './App.css';
 import Panda, { type PandaType } from './components/Panda.js'
 import PandaCreateForm from './components/PandaCreateForm.js'
+import PandaList from './components/PandaList.js'
 
 type Props = any // none actually
 
@@ -15,9 +16,7 @@ type State = {
 class App extends Component<?Props, State> {
   constructor(props: Props) {
     super(props)
-    this.state = {pandas: [],
-      count: 0
-    }
+    this.state = {pandas: [], count: 0}
     this.getUpdatedCount = this.getUpdatedCount.bind(this)
     this.addNewPanda = this.addNewPanda.bind(this)
   }
@@ -50,9 +49,9 @@ class App extends Component<?Props, State> {
         </header>
         <br />
         <PandaCreateForm getUpdatedCount={this.getUpdatedCount} addNewPanda={this.addNewPanda} />
-        <div className="App-intro">
+        <PandaList className="App-intro">
           {pandaComponents}
-        </div>
+        </PandaList>
       </div>
     );
   }
