@@ -6,14 +6,14 @@ import Panda, { type PandaType } from './components/Panda.js'
 import PandaCreateForm from './components/PandaCreateForm.js'
 import PandaList from './components/PandaList.js'
 
-type Props = any // none actually
+type Props = {||}
 
 type State = {
   pandas: Array<PandaType>,
   count: number
 }
 
-class App extends Component<?Props, State> {
+class App extends Component<Props, State> {
   constructor(props: Props) {
     super(props)
     this.state = {pandas: [], count: 0}
