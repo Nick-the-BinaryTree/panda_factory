@@ -13,7 +13,7 @@ type State = {
   count: number
 }
 
-class App extends Component<Props, State> {
+class App extends Component<?Props, State> {
   constructor(props: Props) {
     super(props)
     this.state = {pandas: [], count: 0}
